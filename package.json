@@ -21,6 +21,7 @@
     "deploy:dev": "pm2 start ecosystem.config.js --only dev"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^1.33.3",
     "bcrypt": "^5.0.1",
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
@@ -35,10 +36,11 @@
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.21.19",
     "morgan": "^1.10.0",
-    "mysql": "^2.18.1",
+    "mssql": "^8.1.0",
     "objection": "^2.2.15",
     "swagger-jsdoc": "^6.0.0",
     "swagger-ui-express": "^4.1.6",
+    "tedious": "^14.4.0",
     "winston": "^3.3.3",
     "winston-daily-rotate-file": "^4.5.5"
   },
@@ -61,6 +63,7 @@
     "@types/supertest": "^2.0.11",
     "@types/swagger-jsdoc": "^6.0.0",
     "@types/swagger-ui-express": "^4.1.2",
+    "@types/tedious": "^4.0.7",
     "@types/winston": "^2.4.4",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
     "@typescript-eslint/parser": "^4.23.0",
