@@ -17,9 +17,9 @@ class SupaBaseService {
       },
     );
     this.supabase
-      .from('*')
+      .from('agent_query')
       .on('*', payload => {
-        if (payload.table === 'agent_query' && (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE')) {
+        if ((payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') && payload.new.business_unit_id === parseInt(SUPABASE_BU_ID, 10)) {
           this.processSupabaseQuery(payload.new)
             .then(() => {
               logger.info('done processing realtime query', payload.new.id);
