@@ -5,6 +5,8 @@ export const CREDENTIALS = process.env.CREDENTIALS === 'true';
 export const {
   SUPABASE_HOST,
   SUPABASE_PUBLIC_KEY,
+  SUPABASE_USERNAME,
+  SUPABASE_PASSWORD,
   SUPABASE_BU_ID,
   NODE_ENV,
   PORT,

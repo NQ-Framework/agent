@@ -1,5 +1,6 @@
 import DbService from '@/services/db.service';
 import SupaBaseService from '@/services/supabase.service';
+import { logger } from '@/utils/logger';
 import { NextFunction, Request, Response } from 'express';
 
 class IndexController {
@@ -8,7 +9,7 @@ class IndexController {
   public index = (req: Request, res: Response, next: NextFunction): void => {
     try {
       this.supabase.processSupabaseQueries().then(() => {
-        console.log('done!');
+        logger.info('done processing queries');
       });
       this.dbService.findAllRows().then(rows => {
         console.log('got them rows', rows);
